@@ -81,7 +81,7 @@ public class Server {
             		String clientInputStr = input.readUTF();
             		if (clientInputStr.equals("&Hello!&")) {
             			System.out.println("\nReceived Second Hello!\n");
-            			out.writeUTF("TEST");
+            			out.writeUTF("TEST" + CONTACTS);
             		} else if (clientInputStr.substring(0, 7).equals("&&DONE!")) {
             			String rtn = clientInputStr.substring(7);
             			System.out.println(rtn);
